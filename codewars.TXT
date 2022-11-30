@@ -28,3 +28,61 @@ Take 2 strings s1 and s2 including only letters from a to z.
 
 const longest = (s1, s2) => […new Set(s1+s2)].sort().join(‘’)
 /=================================/
+
+
+/=================================/
+
+
+function boolToWord( bool ){
+  return bool ? 'Yes':'No';
+}
+/=================================/
+
+
+/=================================/
+
+function openOrSenior(data){
+  return data.map(dig => (dig[0] >= 55 && dig[1] > 7 ? 'Senior' : 'Open'));
+}
+/=================================/
+
+
+/=================================/
+Write a program that finds the summation of 
+every number from 1 to num. The number will 
+always be a positive integer greater than 0.
+
+var summation = function (num) {
+  let sum = 0;
+  for(let i = 1; i < num + 1; i++){
+    sum += i;
+  }
+  return sum;
+}
+/=================================/
+
+
+/=================================/
+Given an array of integers as strings and numbers, 
+return the sum of the array values as if all were numbers.
+
+function sumMix(x){
+  let sum = 0;
+  for(let i = 0; i < x.length; i++){
+    sum += +x[i];
+  }
+  return sum;
+}
+/=================================/
+
+
+/=================================/
+The cockroach is one of the fastest insects. 
+Write a function which takes its speed in km per hour 
+and returns it in cm per second, rounded down to the 
+integer (= floored).
+
+function cockroachSpeed(s) {
+  return Math.floor((s*(10**5))/3600);
+}
+/=================================/
