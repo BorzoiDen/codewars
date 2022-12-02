@@ -237,6 +237,108 @@ const binaryArrayToNumber = arr => {
 
 
 /=================================/
+Simple, remove the spaces from the string, 
+then return the resultant string.
+
+function noSpace(x){
+  return x.replace(/\s/g, '');
+}
+/=================================/
+
+
+/=================================/
+In this kata you are required to, given a string, 
+replace every letter with its position in the alphabet.
+If anything in the text isn't a letter, ignore it and don't return it.
+
+function alphabetPosition(text) {
+   let mappedStr = '';
+   text
+   .trim()
+   .toLowerCase()
+   .split("")
+   .forEach(char => {
+      const ascii = char.charCodeAt();
+      if(ascii >= 97 && ascii <= 122){
+         mappedStr += (ascii - 96);
+         mappedStr += " ";
+      };
+     });
+  return mappedStr.trim();
+}
+/=================================/
+
+
+/=================================/
+Write a function that will return the count of distinct 
+case-insensitive alphabetic characters and numeric digits 
+that occur more than once in the input string. The input string 
+can be assumed to contain only alphabets (both uppercase and lowercase) 
+and numeric digits.
+
+function duplicateCount(text){
+ let miniArr = text.toLowerCase().split("")
+  let alreadyFound = []
+  let counter = 0
+  for (let i = 0; i < miniArr.length; i++){
+    let sliced = miniArr.slice(0,i)
+    if(alreadyFound.includes(miniArr[i])){
+      i++
+      continue;
+    } else if (sliced.includes(miniArr[i])){
+      alreadyFound.push(miniArr[i])
+      counter++
+    }
+  }
+  return counter;
+}
+/=================================/
+
+
+/=================================/
+Nathan loves cycling.
+Because Nathan knows it is important to stay 
+hydrated, he drinks 0.5 litres of water per hour of cycling.
+You get given the time in hours and you need
+ to return the number of litres Nathan will drink, rounded to the smallest value.
+
+function litres(time) {
+  return Math.floor(time * 0.5);
+}
+/=================================/
+
+
+/=================================/
+
+/=================================/
+
+
+/=================================/
+
+/=================================/
+
+
+/=================================/
+
+/=================================/
+
+
+/=================================/
+
+/=================================/
+
+
+/=================================/
+
+/=================================/
+
+
+/=================================/
+
+/=================================/
+
+
+/=================================/
 
 /=================================/
 
